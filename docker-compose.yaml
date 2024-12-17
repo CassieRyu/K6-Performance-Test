@@ -1,0 +1,10 @@
+services:
+  k6:
+    image: https://hub.docker.com/r/grafana/k6:latest
+    network_mode: host
+    user: root
+    environment:
+      - USER_PASSWORD
+    volumes:
+     - ./:/sample-k6-service:rw
+    working_dir: /code
